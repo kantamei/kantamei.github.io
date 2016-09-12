@@ -235,6 +235,108 @@
             
               
                 
+                <a class="post-title-link" href="/2016/09/13/python-csv/" itemprop="url">
+                  python csv
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-13T01:06:28+08:00" content="2016-09-13">
+              2016-09-13
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>介绍简单python使用csv存储的方法</p>
+<p>直接得到json数据比如豆瓣与拉勾网</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> requests</div><div class="line"><span class="keyword">import</span> csv</div></pre></td></tr></table></figure>
+<p>豆瓣热门电影数据接口：</p>
+<p><code>url = &#39;https://movie.douban.com/j/search_subjects?type=movie&amp;tag=%E7%83%AD%E9%97%A8&amp;sort=recommend&amp;page_limit=1000&amp;page_start=0&#39;</code></p>
+<p>得到json数据</p>
+<p><code>mlist = requests.get(url).json()[&#39;subjects&#39;]</code></p>
+<p>保存json—-&gt;csv</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">with open(&apos;douban.csv&apos;, &apos;a&apos;) as csvfile:</div><div class="line">    fieldnames = [&apos;title&apos;, &apos;rate&apos;, &apos;url&apos;,&apos;cover_x&apos;, &apos;is_beetle_subject&apos;, &apos;cover_y&apos;, &apos;is_new&apos;, &apos;playable&apos;, &apos;id&apos;, &apos;cover&apos;]</div><div class="line">    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)</div><div class="line">    writer.writeheader()</div><div class="line">    writer.writerows(mlist)</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/09/13/centos-lemp-php-myadmin-ghostblog/" itemprop="url">
                   CentOs6.8 LEMP + phpMyAdmin + GhostBlog
                 </a>
@@ -503,7 +605,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -513,7 +615,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
