@@ -98,7 +98,7 @@ url = &amp;#39;https://movie.douban.com/j/search_subjects?type=movie&amp;amp;tag
 12import requestsimport csv
 豆瓣热门电影数据接口：
 url = &amp;#39;https://movie.douban.com/j/search_subjects?type=movie&amp;amp;tag=%E7%83%AD%E9%97%A8&amp;amp;sort=recommend&amp;amp;page_">
-<meta property="og:updated_time" content="2016-09-12T17:11:25.000Z">
+<meta property="og:updated_time" content="2016-09-12T17:13:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python csv">
 <meta name="twitter:description" content="介绍简单python使用csv存储的方法
@@ -296,7 +296,7 @@ url = &amp;#39;https://movie.douban.com/j/search_subjects?type=movie&amp;amp;tag
 <p>得到json数据</p>
 <p><code>mlist = requests.get(url).json()[&#39;subjects&#39;]</code></p>
 <p>保存json—-&gt;csv</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">with open(&apos;douban.csv&apos;, &apos;a&apos;) as csvfile:</div><div class="line">    fieldnames = [&apos;title&apos;, &apos;rate&apos;, &apos;url&apos;,&apos;cover_x&apos;, &apos;is_beetle_subject&apos;, &apos;cover_y&apos;, &apos;is_new&apos;, &apos;playable&apos;, &apos;id&apos;, &apos;cover&apos;]</div><div class="line">    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)</div><div class="line">    writer.writeheader()</div><div class="line">    writer.writerows(mlist)</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">with</span> open(<span class="string">'douban.csv'</span>, <span class="string">'a'</span>) <span class="keyword">as</span> csvfile:</div><div class="line">    fieldnames = [<span class="string">'title'</span>, <span class="string">'rate'</span>, <span class="string">'url'</span>,<span class="string">'cover_x'</span>, <span class="string">'is_beetle_subject'</span>, <span class="string">'cover_y'</span>, <span class="string">'is_new'</span>, <span class="string">'playable'</span>, <span class="string">'id'</span>, <span class="string">'cover'</span>]</div><div class="line">    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)</div><div class="line">    writer.writeheader()</div><div class="line">    writer.writerows(mlist)</div></pre></td></tr></table></figure>
 
       
     </div>
